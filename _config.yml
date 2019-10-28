@@ -1,0 +1,38 @@
+baseurl: ""
+url: "https://hackathonx.de"
+title: hackathon x
+description: >-
+  Gaming im Museum
+author: Hack &amp; Söhne
+google_site_verification: tjukQQpmzsqdbPMnXjNBcrTMyJvr9QDKjFdGEuhEJwM
+smooch_appid: 5db616dc3c1b9300101aef38
+lang: en_US
+image: /assets/images/htv_cover_image.jpg
+logo: /assets/images/htv_cover_image.jpg
+
+slogan: Gaming im Museum
+info_email: info@hackundsoehne.de
+date: December 7th and 8th, 2019
+apply_url: https://apply.hacktival.io/
+deadline: "December 1, 2019 23:59:59 GMT+02:00"
+deadline_title: "Application Deadline:"
+deadline_expired: "The application deadline expired."
+
+plugins:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+collections:
+  about:
+    output: true
+  juries:
+    output: true
+  faq:
+    output: true
+  cats:
+    output: true
+
+sass:
+  style: compressed
+
+exclude: ["README.md", "Dockerfile"]

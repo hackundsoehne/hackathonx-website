@@ -1,0 +1,81 @@
+---
+layout: compress
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link rel="apple-touch-icon" sizes="180x180" href="/assets/images/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon/favicon-16x16.png">
+	<link rel="manifest" href="/assets/images/favicon/site.webmanifest">
+	<link rel="mask-icon" href="/assets/images/favicon/safari-pinned-tab.svg" color="#1a1919">
+	<link rel="shortcut icon" href="/assets/images/favicon/favicon.ico">
+	<meta name="msapplication-TileColor" content="#1a1919">
+	<meta name="msapplication-config" content="/assets/images/favicon/browserconfig.xml">
+	<meta name="theme-color" content="#1a1919">
+
+	<link rel="stylesheet" type="text/css" href="/assets/css/styles.css">
+	{% seo %}
+
+	{% unless site.smooch_appid == "" or site.smooch_appid == nil %}
+	<script>/* smooch init code */
+	!function(e,n,t,r){
+		function o(){try{var e;if((e="string"==typeof this.response?JSON.parse(this.response):this.response).url){var t=n.getElementsByTagName("script")[0],r=n.createElement("script");r.async=!0,r.src=e.url,t.parentNode.insertBefore(r,t)}}catch(e){}}var s,p,a,i=[],c=[];e[t]={init:function(){s=arguments;var e={then:function(n){return c.push({type:"t",next:n}),e},catch:function(n){return c.push({type:"c",next:n}),e}};return e},on:function(){i.push(arguments)},render:function(){p=arguments},destroy:function(){a=arguments}},e.__onWebMessengerHostReady__=function(n){if(delete e.__onWebMessengerHostReady__,e[t]=n,s)for(var r=n.init.apply(n,s),o=0;o<c.length;o++){var u=c[o];r="t"===u.type?r.then(u.next):r.catch(u.next)}p&&n.render.apply(n,p),a&&n.destroy.apply(n,a);for(o=0;o<i.length;o++)n.on.apply(n,i[o])};var u=new XMLHttpRequest;u.addEventListener("load",o),u.open("GET","https://"+r+".webloader.smooch.io/",!0),u.responseType="json",u.send()
+	}(window,document,"Smooch","{{ site.smooch_appid }}");
+	</script>
+	{% endunless %}
+</head>
+<body>
+	{% include navigation.html %}
+	
+	<main class="main">
+		{{ content }}
+	</main>
+	
+	{% include footer.html %}
+
+	<style>
+	{% if page.color %}
+		.colored a,
+		.colored mark,
+		.accent-tc {
+			color: {{ page.color }} !important;
+		}
+		.accent-bg {
+			background-color: {{ page.color }} !important;
+		}
+		.accent-bc {
+			border-color: {{ page.color }} !important;
+		}
+	{% endif %}
+	{% if page.bg_url %}
+		body {
+			background-image: url('{{ page.bg_url }}');
+			background-position: {{ page.bg_position }};
+		}
+	{% endif %}
+	</style>
+
+	{% unless site.smooch_appid == "" or site.smooch_appid == nil %}
+	<script type="text/javascript">
+		Smooch.init({
+			appId: '{{ site.smooch_appid }}',
+			customText: {
+				headerText: 'How can we help?',
+				inputPlaceholder: 'Type a message, anonymously...',
+				sendButtonText: 'Send'
+			}
+		}).then(
+			function() {
+			},
+			function(err) {
+				console.log('error');
+			}
+		);
+	</script>
+	{% endunless %}
+</body>
+</html>

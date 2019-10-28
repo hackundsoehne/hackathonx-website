@@ -1,0 +1,31 @@
+---
+layout: normal
+title: Jury
+color: "#00ff00"
+bg_url: "/assets/images/shapes/Form3_grün_transparent.svg"
+bg_position: "-35vh 70vh"
+---
+<header class="content-siteheader">
+	<h1>{{ page.title }}</h1>
+</header>
+
+{% for jury in site.juries %}
+{% unless jury.hidden %}
+<div class="section jury">
+	<div class="section-text">
+		<h4 class="accent-tc">{{ jury.name }}</h4>
+		{{ jury.content | markdownify }}
+	</div>
+	<div class="section-image">
+		<img src="{{ jury.image }}" alt="{{ jury.name }} Image">
+	</div>
+</div>
+{% endunless %}
+{% endfor %}
+
+<!-- Not sure if there will be more jury members, so keep this commented out for now
+<div class="content-footer">
+	<p><strong>That's Not All!</strong></p>
+	<p><strong>Check Back <mark>Soon</mark> For More Jury Members.</strong></p>
+</div>
+-->

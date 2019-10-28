@@ -1,0 +1,47 @@
+---
+layout: normal
+title: Schedule
+color: "#ff5b00"
+bg_url: "/assets/images/shapes/Form3_orange_transparent.svg"
+bg_position: "-20vw 10vh"
+---
+<header class="content-siteheader">
+	<h1>{{ page.title }}</h1>
+</header>
+
+<div class="framedlists">
+
+	<div class="framedlist">
+		<header class="list-header"><b>Saturday</b>, December 7th</header>
+		<ol>
+		{% for item in site.data.saturday %}
+			<li>
+				<b>{{ item.time }}</b>
+				<br>
+				<span>{{ item.name }}</span>
+			</li>
+		{% endfor %}
+		</ol>
+	</div>
+
+	<div class="framedlist">
+		<header class="list-header"><b>Sunday</b>, December 8th</header>
+		<ol>
+		{% for item in site.data.sunday %}
+			<li>
+				<b>{{ item.time }}</b>
+				<br>
+				<span>{{ item.name }}</span>
+			</li>
+		{% endfor %}
+		</ol>
+	</div>
+
+</div>
+
+<!--
+<div class="content-footer">
+	<p><strong>The Schedule is not yet complete.</p>
+	<p><strong>Stay tuned for <mark class="accent-tc">more</mark>!</strong></p>
+</div>
+-->

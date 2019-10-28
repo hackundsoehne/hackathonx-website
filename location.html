@@ -1,0 +1,43 @@
+---
+layout: base
+title: Location
+color: "#00ff00"
+bg_url: "/assets/images/shapes/Form1_grün_transparent.svg"
+bg_position: "75vw -25vh"
+---
+<div class="container colored">
+	<div id="map" class="map"></div>
+
+	<p>The hackathon is held in the <a href="https://www.landesmuseum.de/creative/museum-x" target="_blank" rel="noopener">museum x</a>.</p>
+
+	<h3 class="accent-tc">Address</h3>
+	<address>
+        Badisches Landesmuseum - Museum am Markt <br>
+        Karl-Friedrich-Straße <br>
+        76133 Karlsruhe <br>
+        Germany
+	</address>
+
+	<h3 class="accent-tc">Getting there</h3>
+	<p>Take a tram to the station "Marktplatz". The museum x is only a couple of meters away from there. Tram schedules can be found <a href="https://www.kvv.de/en/plan-trip/journey-planner.html">here</a>.</p>
+</div>
+
+<link rel="stylesheet" type="text/css" href="/assets/css/leaflet.css">
+<script src="/assets/js/leaflet.js"></script>
+<script>
+	var map = L.map('map').setView([49.00074, 8.3835], 13);
+	L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+	}).addTo(map);
+    
+	var myIcon = L.icon({
+		iconUrl: '/assets/images/x-logo.png',
+		iconSize: [32, 32],
+		popupAnchor: [0, -20]
+	});
+
+L.marker([49.009985, 8.403823], {icon: myIcon})
+		.addTo(map)
+		.bindPopup('museum x')
+		.openPopup();
+</script>

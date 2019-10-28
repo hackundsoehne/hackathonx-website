@@ -1,0 +1,71 @@
+---
+layout: normal
+title: Hacktival 2019
+color: "#ff00b6"
+bg_url: "/assets/images/shapes/alleFormen_pink_transparent.svg"
+bg_position: "center center"
+---
+<section class="box">
+	<header class="content-header">
+		<h1>{{ site.slogan }}</h1>
+		<p><strong>{{ site.date }}</strong></p>
+		<!--
+		<a class="btn" href="{{ site.apply_url }}" target="_blank" rel="noopener">Apply Now</a>
+		-->
+		<p><strong id="coutdown">Loading...</strong></p>
+	</header>
+</section>
+
+
+<script type="text/javascript">
+	var countDownDate = new Date("{{ site.deadline }}");
+	var x = setInterval(function() {
+		var now = new Date().getTime();
+		var distance = countDownDate - now;
+		var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+		var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+		var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+		var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+		var message = "{{ site.deadline_title }} " + days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+		document.getElementById("coutdown").innerHTML = message;
+		if (distance < 0) {
+			clearInterval(x);
+			document.getElementById("coutdown").innerHTML = "{{ site.deadline_expired }}";
+		}
+	}, 1000);
+</script>
+
+<script type="application/ld+json">
+{
+	"@context": "http://schema.org",
+	"@type": "Event",
+	"name": "Hacktival Hackthon",
+	"description": "The Hacktival Hackthon is the largest student-run hackathon in Germany.",
+	"image": "https://hacktival.io/assets/images/htv_cover_image.jpg",
+	"startDate": "2019-05-11T09:00",
+	"endDate": "2019-05-12T19:00",
+	"organizer": {
+		"name": "Hack und Söhne"
+	},
+	"location": {
+		"@type": "Place",
+		"name": "ZKM",
+		"address": {
+			"@type": "PostalAddress",
+			"streetAddress": "Lorenzstraße 19",
+			"addressLocality": "Karlsruhe",
+			"postalCode": "76135",
+			"addressCountry": "DE"
+		}
+	},
+	"offers": {
+		"@type": "Offer",
+		"name": "Admission",
+		"price": "0",
+		"priceCurrency": "EUR",
+		"validFrom": "2019-05-11T09:00",
+		"url": "https://apply.hacktival.io/",
+		"availability": "http://schema.org/InStock"
+	}
+}
+</script>
