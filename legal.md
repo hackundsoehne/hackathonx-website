@@ -2,7 +2,7 @@
 layout: normal
 title: Legal
 color: "#ff5b00"
-bg_url: "/assets/images/shapes/Form1_orange_transparent.svg"
+bg_url: "/assets/images/X.svg"
 bg_position: "70vw 30vh"
 ---
 
