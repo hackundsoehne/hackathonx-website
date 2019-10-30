@@ -1,6 +1,7 @@
 ---
 title: What is hackathon x?
 image: /assets/images/about/what_is_img.jpg
+image-copyright: "© Badisches Landesmuseum, Foto: ARTIS – Uli Deck"
 ---
 hackathon x is part of the Creative Collections project, which is dedicated to opening the Badisches Landesmuseum to participation by its users and developing new digital concepts. It is organized in close cooperation with the student organization Hack & Söhne. Since the museum visit should also be entertaining and fun, the focus of the hackathon is on gaming in the museum.
 

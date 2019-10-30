@@ -1,6 +1,7 @@
 ---
 title: What can you expect?
 image: /assets/images/about/expect_img.jpg
+image-copyright: "© Badisches Landesmuseum, Foto: ARTIS – Uli Deck"
 ---
 Work with motivated people and bring your ideas to life. You will join a team of up to 4 people to work on a hardware or software project. Our experienced mentors will support you.
 
