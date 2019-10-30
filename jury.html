@@ -14,18 +14,22 @@ bg_position: "-35vh 70vh"
 <div class="section jury">
 	<div class="section-text">
 		<h4 class="accent-tc">{{ jury.name }}</h4>
+        <div class="jury-subtitle"><i>{{ jury.subtitle1 }}</i></div>
+        <div class="jury-subtitle"><i>{{ jury.subtitle2 }}</i></div>
+
 		{{ jury.content | markdownify }}
 	</div>
 	<div class="section-image">
-		<img src="{{ jury.image }}" alt="{{ jury.name }} Image">
+        <figure>
+		    <img src="{{ jury.image }}" alt="{{ jury.name }} Image" />
+            <footer><small> {{jury.image-copyright}} </small></footer>
+        </figure>
 	</div>
 </div>
 {% endunless %}
 {% endfor %}
 
-<!-- Not sure if there will be more jury members, so keep this commented out for now
 <div class="content-footer">
 	<p><strong>That's Not All!</strong></p>
 	<p><strong>Check Back <mark>Soon</mark> For More Jury Members.</strong></p>
 </div>
--->

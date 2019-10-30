@@ -292,7 +292,7 @@ h6 { font-size: 1rem; }
 
 	.section-image {
 		img {
-			width: 280px;
+			width: 250px;
 			-webkit-filter: grayscale(100%);
 			filter: grayscale(100%);
 			transition: filter .25s linear;
@@ -302,8 +302,12 @@ h6 { font-size: 1rem; }
 			-webkit-filter: grayscale(0%);
 			filter: grayscale(0%);
 		}
+        footer {
+            width: 250px;
+        }
 	}
 }
+
 
 /* [ACCORDION] */
 
