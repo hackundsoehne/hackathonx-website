@@ -1,6 +1,6 @@
 ---
 layout: normal
-title: Categories
+title: Challenge
 color: "#ff00b6"
 bg_url: "/assets/images/X.svg"
 bg_position: "70vw -40vh"
@@ -13,7 +13,6 @@ bg_position: "70vw -40vh"
 <div class="accordion">
 	<a class="accordion-btn {% if forloop.first %}active{% endif %}" href="#">
 		<span><b>{{ cat.title }}</b> <span>{{ cat.subtitle }}</span></span>
-		<span class="accordion-indicator"></span>
 	</a>
 	<div class="accordion-panel colored">{{ cat.content | markdownify }}</div>
 </div>
@@ -27,6 +26,7 @@ bg_position: "70vw -40vh"
 -->
 
 <script>
+	/* Disabled because there is only one challenge. If we get more challenges it would make sense to uncomment this.
 	var accs = document.getElementsByClassName("accordion-btn");
 	for (var i = 0; i < accs.length; i++) {
 		accs[i].addEventListener("click", function(event) {
@@ -34,4 +34,5 @@ bg_position: "70vw -40vh"
 			this.classList.toggle("active");
 		});
 	}
+	*/
 </script>
