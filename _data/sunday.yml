@@ -2,11 +2,9 @@
   name: Breakfast
 - time: 12:00 - 13:30
   name: Lunch Time
-- time: 11:00 - 14:30
-  name: Expo Phase
-- time: "16:00"
+- time: "15:00"
   name: Hacking stops!
-- time: 16:00 - 17:00
+- time: 15:00 - 17:00
   name: Pitches
 - time: 17:00 - 18:00
   name: Award Ceremony and Closing Session

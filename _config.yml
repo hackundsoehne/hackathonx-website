@@ -2,7 +2,7 @@ baseurl: ""
 url: "https://hackathonx.de"
 title: hackathon x
 description: >-
-  Gaming in the museum
+  Gaming in Museums
 author: Hack &amp; Söhne
 google_site_verification: tjukQQpmzsqdbPMnXjNBcrTMyJvr9QDKjFdGEuhEJwM
 smooch_appid: 5db616dc3c1b9300101aef38
@@ -10,12 +10,12 @@ lang: en_US
 image: /assets/images/logos/hackathon-x/SVG/BLM_museumx_LOGO_hackathon_weiss-rot.svg
 logo: /assets/images/logos/hackathon-x/SVG/BLM_museumx_LOGO_hackathon_weiss-rot.svg
 
-slogan: Gaming in the museum
+slogan: Gaming in Museums
 info_email_hs: info@hackundsoehne.de
 info_email_musx: creative@landesmuseum.de
 date: December 7th and 8th, 2019
 apply_url: https://apply.hackathonx.de/
-deadline: "December 1, 2019 23:59:59 GMT+02:00"
+deadline: "December 5, 2019 23:59:59 GMT+01:00"
 deadline_title: "Application Deadline:"
 deadline_expired: "The application deadline expired."
 
